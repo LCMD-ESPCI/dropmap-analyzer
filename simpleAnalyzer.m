@@ -1,4 +1,19 @@
 %% SIMPLE ANALYZER %%
+% Analyse beadline bioassays in droplet
+% Copyright (C) 2019  Guilhem CHENON
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % Assuming vertical beadline & uint16 images
 % Provide .tif files (one per time point)
 % Name them like this: name1.tif name2.tif for all time points
@@ -8,7 +23,7 @@
 %   average droplet radius in px
 % INPUT: .tif files
 % OUTPUT: .xlsx file & .mat file
-% This program is meant to process small size images <4000*4000px²
+% This program is meant to process small size images <4000*4000pxÂ²
 % Indeed Hough algorithm is not efficient for large images
 % So for big images you would need to crop them programatically and add a
 % loop
