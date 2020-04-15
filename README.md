@@ -15,7 +15,7 @@ Name them as follows: "name1.tif" "name2.tif" for all time points, like the exam
 This program is meant to process small size images (<4000\*4000px² typically)
 It needs to be adapted for larger images and will take too much time.
 For bigger images I would advice to crop them programatically and add a loop on sub-images.
-Or you could use regionprops function on a binarized image which scales much better.
+Or you could use regionprops function on a binarized image which scales better.
 ## verify.m: Check droplets visually
 ### Before launching verification:
    - Process your data as required and know the droplets you want to check visually.
