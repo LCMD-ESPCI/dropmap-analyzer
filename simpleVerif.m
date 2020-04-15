@@ -6,6 +6,7 @@ try
 [xlsFileName,pathName] = uigetfile('*.xls;*.xlsx','Select the datasheet to verify'); % Select Excel file
 cd(pathName)
 sheetArray=selectExcelSheet(xlsFileName,pathName,'Single','Verify');
+
 dropIdx=sheetArray{1}(:,1)';
 catch
     disp('No file or datasheet selected. Restart script.')
@@ -40,3 +41,14 @@ for dd=dropIdx
     end
 end
 disp('Verification over')
+
+function sheetArray=selectExcelSheet(xlsFileName,pathName,singleOrMultiple,OKString)
+% sheetArray=selectExcelSheet('test.xlsx','C:/Documents','Multiple','Yaaay')
+cd(fileparts(pathName));
+[~,sheetList] = xlsfinfo(xlsFileName);
+[sheetIdx,~] = listdlg('PromptString','Datasheet?','ListString',sheetList,'SelectionMode',singleOrMultiple, 'OKString',OKString);
+nSheets=length(sheetIdx);
+sheetArray=cell(1,nSheets);
+for ss=1:nSheets
+sheetArray{ss}=xlsread(xlsFileName,sheetList{sheetIdx(ss)});
+end
