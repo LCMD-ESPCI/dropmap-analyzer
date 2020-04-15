@@ -11,7 +11,7 @@ data=table;
 dlg1Title = 'Enter parameters'; % Dialog box title
 dlg1Dims = [1 50]; % Size of dialog box input fields
 dlg1Prompt={'Beadline channel(s)','Bright Field channel','Time points','Average droplets radius (px)'}; % Name of prompts
-dlg1DefInputs={'1 3','4','3','20'}; % Default values
+dlg1DefInputs={'1 3','4','3','25'}; % Default values
 try
 dlg1Answer = inputdlg(dlg1Prompt,dlg1Title,dlg1Dims,dlg1DefInputs); % Makes the dialog box
 blIndex=str2num(dlg1Answer{1});
