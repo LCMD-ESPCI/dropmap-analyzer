@@ -9,7 +9,7 @@ sheetArray=selectExcelSheet(xlsFileName,pathName,'Single','Verify');
 
 dropIdx=sheetArray{1}(:,1)';
 catch
-    disp('No file or datasheet selected. Restart script.')
+    disp('Wrong file or datasheet selected. Restart script.')
     return
 end
 
