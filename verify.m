@@ -38,6 +38,7 @@ for dd=dropIdx
     k=waitforbuttonpress;
     catch
         disp('Verification over')
+        return
     end
 end
 disp('Verification over')
