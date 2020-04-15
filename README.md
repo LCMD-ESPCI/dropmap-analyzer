@@ -14,7 +14,7 @@ Name them as follows: "name1.tif" "name2.tif" for all time points, like the exam
 ### OUTPUT: .xlsx file & .mat file
 ### NOTE
 This program is meant to process small size images (<4000\*4000px² typically)
-Indeed, Hough algorithm is not efficient for larger images and will take too much time.
+It needs to be adapted for larger images and will take too much time.
 For bigger images I would advice to crop them programatically and add a loop on sub-images.
 Or you could use regionprops function on a binarized image which scales much better.
 ## Simple Verif: Check droplets visually
