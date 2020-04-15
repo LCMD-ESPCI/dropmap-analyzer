@@ -3,8 +3,7 @@ Monitor antibody or cytokine secretion of single cells in droplets over time
 ## Requirements: 
 - 'MATLAB','9.6'
 - 'Image Processing Toolbox','10.4'
-## Simple Analyzer: Analyze your images and measure droplet signal (with beadline assay)
-simpleAnalyzer.m
+## analyze.m: Analyze your images and measure droplet signal (with beadline assay)
 ### Before launching analysis you should know:
    - Beadline channel indexes
    - Bright field channel index
@@ -17,8 +16,7 @@ This program is meant to process small size images (<4000\*4000px² typically)
 It needs to be adapted for larger images and will take too much time.
 For bigger images I would advice to crop them programatically and add a loop on sub-images.
 Or you could use regionprops function on a binarized image which scales much better.
-## Simple Verif: Check droplets visually
-For verification purpose, we provide the additionnal script simpleVerif.m
+## verify.m: Check droplets visually
 ### Before launching verification:
    - Process your data as required and know the droplets you want to check visually.
    - Save the indexes of these droplets of interest in a new datasheet. (You need to know the name of the datasheet)
